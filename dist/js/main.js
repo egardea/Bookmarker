@@ -6,14 +6,16 @@ function saveBookmark (e) {
     //get values
     var siteName = document.getElementById('siteName').value;
     var siteUrl = document.getElementById('siteUrl').value;
+    var siteOffer = document.getElementById('siteOffer').value;
 
-    if(!validateForm(siteName, siteUrl)){
+    if(!validateForm(siteName, siteUrl, siteOffer)){
         return false;
     }
 
     var bookmark = {
         name: siteName,
-        url: siteUrl
+        url: siteUrl,
+        offer: siteOffer
     }
     
     if(localStorage.getItem('bookmarks') === null) {
@@ -66,13 +68,16 @@ function fetchBookmarks(){
     for(var i = 0; i < bookmarks.length; i++){
         var name = bookmarks[i].name;
         var url = bookmarks[i].url;
+        var offer = bookmarks[i].offer;
 
-        bookmarkResults.innerHTML += '<div class="well">'+
-                                     '<h3>'+name+
-                                     ' <a class="btn btn-default" target="_blank" href="'+url+'">Visit</a> ' +
-                                     ' <a onclick="deleteBookmark(\''+url+'\')"class="btn btn-danger" href="#">Delete</a> ' +
-                                     '</h3>'+
-                                     '</div>';
+        bookmarkResults.innerHTML += `<div class="well">
+                                        <h3>${name}
+                                            <a class="btn btn-default" target="_blank" href="${url}">Visit</a>
+                                            <a onclick="deleteBookmark(\'${url}\')"class="btn btn-danger" href="#">Delete</a>
+                                        </h3>
+                                        <h5 class="offer">Offer Amount $<span>${offer}</span></h5>
+                                    </div>
+                                    `;
     }
 }
 

@@ -77,3 +77,18 @@ body {
       border-bottom: 0;
     }
   }
+.well{
+  display: flex;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+.offer{
+  margin-left: 10px;
+  border-left: solid 1px black;
+  padding-left: 5px;
+}
+.offer > span{
+  width: 100%;
+  color: green;
+  border-bottom: solid 1px black;
+}
