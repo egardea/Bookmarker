@@ -1,5 +1,6 @@
 //listen for form submit
 document.getElementById('myForm').addEventListener('submit', saveBookmark);
+window.setTimeout(function(){ alert("Reload to see your Deals are saved"); }, 15000);
 
 //save bookmark
 function saveBookmark (e) {
