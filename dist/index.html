@@ -14,43 +14,42 @@
 
   <body onload="fetchBookmarks()">
 
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-        </nav>
-        <h3 class="text-muted">Deal Flow</h3>
-      </div>
+    <div class="header clearfix">
+      <nav>
+      </nav>
+      <h3 class="text-muted">Deal Flow</h3>
+    </div>
 
-      <div class="jumbotron">
-        <h2>Save Your Current Deals</h2>
-        <form id="myForm">
-            <div class="form-group">
+    <div class="">
+
+      <div class="container">
+        <form id="myForm" class="row border-bottom">
+            <div class="form-group col">
                 <label>Deal Name</label>
                 <input type="text" class="form-control" id="siteName" placeholder="Deal Name">
             </div>    
-            <div class="form-group">
+            <div class="form-group col">
                 <label>Deal Link</label>
-                <input type="text" class="form-control" id="siteUrl" placeholder="Deal URL">
+                <input type="text" class="form-control" id="siteUrl" placeholder="URL">
             </div>
-            <div class="form-group">
+            <div class="form-group col">
               <label>Offer Amount</label>
-              <input type="text" class="form-control" id="siteOffer" placeholder="Dollar Amount">
+              <input type="text" class="form-control" id="siteOffer" placeholder="$123,456">
             </div>
-            <button type="submit" class="btn btn-primary">Sumbit</button>
+            <button type="submit" class="btn btn-primary btn-sm col">Save</button>
         </form>
       </div>
 
-      <div class="row marketing">
-        <div class="col-lg-12">
-          <div id="bookmarksResults"></div>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <p>&copy; 2019 Deal Flow, Inc.</p>
-      </footer>
-
     </div> <!-- /container -->
+
+    <main class="container">
+          <div id="bookmarksResults" class="d-flex flex-row flex-wrap"></div>
+    </main>
+
+    <footer class="fixed-bottom text-center footer">
+      <p>&copy; 2019 Deal Flow, Inc.</p>
+    </footer>
+
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="

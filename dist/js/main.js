@@ -1,6 +1,6 @@
 //listen for form submit
 document.getElementById('myForm').addEventListener('submit', saveBookmark);
-window.setTimeout(function(){ alert("Reload to see your Deals are saved"); }, 15000);
+//window.setTimeout(function(){ alert("Reload to see your Deals are saved"); }, 15000);
 
 //save bookmark
 function saveBookmark (e) {
@@ -72,11 +72,12 @@ function fetchBookmarks(){
         var offer = bookmarks[i].offer;
 
         bookmarkResults.innerHTML += `<div class="well">
-                                        <h3>${name}
+                                        <h2>${name}</h2>
+                                        <h3>
                                             <a class="btn btn-default" target="_blank" href="${url}">Visit</a>
                                             <a onclick="deleteBookmark(\'${url}\')"class="btn btn-danger" href="#">Delete</a>
                                         </h3>
-                                        <h5 class="offer">Offer Amount $<span>${offer}</span></h5>
+                                        <h5 class="offer">Offer $<span>${offer}</span></h5>
                                     </div>
                                     `;
     }

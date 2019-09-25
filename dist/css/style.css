@@ -1,8 +1,7 @@
 /* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+    padding: 20px;
+}
   
   /* Everything but the jumbotron gets side spacing for mobile first views */
   .header,
@@ -23,12 +22,18 @@ body {
     margin-bottom: 0;
     line-height: 40px;
   }
+
+  #bootmarksResults{
+    overflow: hidden;
+  }
   
   /* Custom page footer */
   .footer {
     padding-top: 19px;
     color: #777;
     border-top: 1px solid #e5e5e5;
+    z-index: 1;
+    background-color: #e5e5e5;
   }
   
   /* Customize container */
@@ -42,23 +47,13 @@ body {
   }
   
   /* Main marketing message and sign up button */
-  .jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+  .btn-primary {
+    font-size: 1rem;
+    height: 2.5rem;
+    position: relative;
+    top: 30px;
   }
-  .jumbotron .btn {
-    padding: 14px 24px;
-    font-size: 21px;
-  }
-  
-  /* Supporting marketing content */
-  .marketing {
-    margin: 40px 0;
-  }
-  .marketing p + h4 {
-    margin-top: 28px;
-  }
-  
+
   /* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
@@ -78,14 +73,9 @@ body {
     }
   }
 .well{
-  display: flex;
-  align-items: center;
-  padding: 0 0 10px 0;
-}
-.offer{
-  margin-left: 10px;
-  border-left: solid 1px black;
-  padding-left: 5px;
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  padding: 20px;
 }
 .offer > span{
   width: 100%;
